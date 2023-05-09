@@ -1,7 +1,7 @@
 {
   "name": "a04-swaggyltw",
   "version": "1.0.0",
-  "description": "\"rps endpoints\"",
+  "description": "rps endpoints",
   "main": "server.js",
   "type": "module",
   "scripts": {

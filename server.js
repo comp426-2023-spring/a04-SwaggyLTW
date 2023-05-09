@@ -16,19 +16,19 @@ app.get('/app', (req, res)=>{
 });
 //RPS
 app.get('/app/rps', (req, res) =>{
-    res.status(200).send(rps());
+    res.status(200).send(JSON.stringify(rps()));
 });
 //rpsls
 app.get('/app/rpsls', (req, res) =>{
-    res.status(200).send(rpsls());
+    res.status(200).send(JSON.stringify(rpsls()));
 });
 //rps shot
 app.get('app/rps/play/', (req, res)=>{
-    res.status(200).send(rps(req[query][shot]));
+    res.status(200).send(JSON.stringify(rps(req.query.shot)));
 });
 //rpsls shot
 app.get('app/rpsls/play/', (req, res)=>{
-    res.status(200).send(rpsls(req["query"]["shot"]));
+    res.status(200).send(rpsls(req.query.shot));
 });
 //rps POST request
 app.get('app/rps/play/', (req, res)=>{

@@ -31,11 +31,11 @@ app.get('/app/rpsls/play/', (req, res)=>{
     res.status(200).send(rpsls(req.query.shot));
 });
 //rps POST request
-app.get('/app/rps/play/', (req, res)=>{
+app.post('/app/rps/play/', (req, res)=>{
     res.status(200).send(rps(req.body.shot));
 });
 //rpsls POST request
-app.get('/app/rpsls/play/', (req, res)=>{
+app.post('/app/rpsls/play/', (req, res)=>{
     res.status(200).send(rpsls(req.body.shot));
 });
 //rps URL

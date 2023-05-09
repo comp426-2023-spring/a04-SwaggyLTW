@@ -40,11 +40,11 @@ app.get('app/rpsls/play', (req, res)=>{
 });
 //rps URL
 app.get('app/rps/play/:shot', (req, res)=>{
-    res.status(200).send(rps(req.params.shot));
+    res.status(200).send(rps(req.params.arg));
 });
 //rpsls URL
 app.get('app/rpsls/play/:shot', (req, res)=>{
-    res.status(200).send(rpsls(req.params.shot));
+    res.status(200).send(rpsls(req.params.arg));
 });
 //404 Not Found
 app.get('*', (req, res)=> {

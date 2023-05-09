@@ -23,28 +23,31 @@ app.get('/app/rpsls', (req, res) =>{
     res.status(200).send(JSON.stringify(rpsls()));
 });
 //rps shot
-app.get('app/rps/play/', (req, res)=>{
+app.get('/app/rps/play/', (req, res)=>{
     res.status(200).send(JSON.stringify(rps(req.query.shot)));
+    console.log(req.query.shot);
+    console.log(JSON.stringify(req.query.shot));
 });
 //rpsls shot
-app.get('app/rpsls/play/', (req, res)=>{
+app.get('/app/rpsls/play/', (req, res)=>{
     res.status(200).send(rpsls(req.query.shot));
 });
 //rps POST request
-app.get('app/rps/play/', (req, res)=>{
+app.get('/app/rps/play/', (req, res)=>{
     res.status(200).send(JSON.stringify(rps(req.body.shot)));
 });
 //rpsls POST request
-app.get('app/rpsls/play/', (req, res)=>{
+app.get('/app/rpsls/play/', (req, res)=>{
     res.status(200).send(JSON.stringify(rpsls(req.body.shot)));
 });
 //rps URL
-app.get('app/rps/play/:shot/', (req, res)=>{
+app.get('/app/rps/play/:shot/', (req, res)=>{
     res.status(200).send(JSON.stringify(rps(req.params.shot)));
+    console.log("result");
 });
 //rpsls URL
-app.get('app/rpsls/play/:shot/', (req, res)=>{
-    res.status(200).send(JSON.stringigy(rpsls(req.params.shot)));
+app.get('/app/rpsls/play/:shot/', (req, res)=>{
+    res.status(200).send(JSON.stringify(rpsls(req.params.shot)));
 });
 //404 Not Found
 app.get('*', (req, res)=> {

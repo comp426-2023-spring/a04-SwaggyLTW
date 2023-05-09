@@ -39,11 +39,11 @@ app.get('app/rpsls/play', (req, res)=>{
     res.status(200).send(rpsls(req.body.shot));
 });
 //rps URL
-app.get('app/rps/play/:shot', (req, res)=>{
+app.get('app/rps/play/:args', (req, res)=>{
     res.status(200).send(rps(req.params.args));
 });
 //rpsls URL
-app.get('app/rpsls/play/:shot', (req, res)=>{
+app.get('app/rpsls/play/:args', (req, res)=>{
     res.status(200).send(rpsls(req.params.args));
 });
 //404 Not Found

@@ -32,11 +32,11 @@ app.get('/app/rpsls/play/', (req, res)=>{
 });
 //rps POST request
 app.get('/app/rps/play/', (req, res)=>{
-    res.status(200).send(JSON.stringify(rps(req.body.shot)));
+    res.status(200).send(rps(req.body.shot));
 });
 //rpsls POST request
 app.get('/app/rpsls/play/', (req, res)=>{
-    res.status(200).send(JSON.stringify(rpsls(req.body.shot)));
+    res.status(200).send(rpsls(req.body.shot));
 });
 //rps URL
 app.get('/app/rps/play/:shot/', (req, res)=>{

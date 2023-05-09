@@ -51,6 +51,4 @@ app.get('*', (req, res)=> {
     res.status(404).send('404 NOT FOUND')
 });
 //Start server, listen to argport
-app.listen(port, () => {
-    console.log('App listening on port ${port}');
-});
+app.listen(port);

@@ -24,11 +24,11 @@ app.get('/app/rpsls', (req, res) =>{
 });
 //rps shot
 app.get('app/rps/play/', (req, res)=>{
-    res.status(200).send(rps(req.query.shot));
+    res.status(200).send(rps(req[query][shot]));
 });
 //rpsls shot
 app.get('app/rpsls/play/', (req, res)=>{
-    res.status(200).send(rpsls(req.query.shot));
+    res.status(200).send(rpsls(req["query"]["shot"]));
 });
 //rps POST request
 app.get('app/rps/play/', (req, res)=>{
@@ -48,7 +48,7 @@ app.get('app/rpsls/play/:shot/', (req, res)=>{
 });
 //404 Not Found
 app.get('*', (req, res)=> {
-    res.status(404).send('404 NOT FOUND')
+    res.status(404).send('404 NOT FOUND');
 });
 //Start server, listen to argport
 app.listen(port);

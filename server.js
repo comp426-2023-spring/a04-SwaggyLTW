@@ -25,8 +25,6 @@ app.get('/app/rpsls', (req, res) =>{
 //rps shot
 app.get('/app/rps/play/', (req, res)=>{
     res.status(200).send(JSON.stringify(rps(req.query.shot)));
-    console.log(req.query.shot);
-    console.log(JSON.stringify(req.query.shot));
 });
 //rpsls shot
 app.get('/app/rpsls/play/', (req, res)=>{
@@ -43,7 +41,6 @@ app.get('/app/rpsls/play/', (req, res)=>{
 //rps URL
 app.get('/app/rps/play/:shot/', (req, res)=>{
     res.status(200).send(JSON.stringify(rps(req.params.shot)));
-    console.log("result");
 });
 //rpsls URL
 app.get('/app/rpsls/play/:shot/', (req, res)=>{
